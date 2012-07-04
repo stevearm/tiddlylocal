@@ -5,21 +5,8 @@
 			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>
 		</layout>
 	</appender>
-	<appender name="milliroller" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<file>/var/log/tiddlybox/tiddlybox.log</file>
-		<layout class="ch.qos.logback.classic.PatternLayout">
-			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>
-		</layout>
-		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<fileNamePattern>/var/log/tiddlybox/tiddlybox-%d{yyyy-MM-dd}.%i.txt</fileNamePattern>
-				<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
-					<maxFileSize>10MB</maxFileSize>
-				</timeBasedFileNamingAndTriggeringPolicy>
-		</rollingPolicy>
-	</appender>
 
 	<root level="INFO">
 		<appender-ref ref="stdout"/>
-		<appender-ref ref="milliroller"/>
 	</root>
 </configuration>
