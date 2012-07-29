@@ -1,12 +1,15 @@
 <?xml version="1.0"?>
 <configuration>
 	<appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
-		<layout class="ch.qos.logback.classic.PatternLayout">
-			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>
-		</layout>
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n
+			</pattern>
+		</encoder>
 	</appender>
 
+	<logger name="org.eclipse.jetty" level="WARN" />
+
 	<root level="INFO">
-		<appender-ref ref="stdout"/>
+		<appender-ref ref="stdout" />
 	</root>
 </configuration>

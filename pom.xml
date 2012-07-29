@@ -121,6 +121,12 @@
 			<artifactId>jetty-servlet</artifactId>
 			<version>7.6.4.v20120524</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>com.beust</groupId>
+			<artifactId>jcommander</artifactId>
+			<version>1.18</version>
+		</dependency>
 
 	</dependencies>
 
