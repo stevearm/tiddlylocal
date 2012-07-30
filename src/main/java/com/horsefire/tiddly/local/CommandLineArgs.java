@@ -11,7 +11,7 @@ public class CommandLineArgs {
 	private boolean help;
 
 	@Parameter(names = { "--port" }, description = "Http port")
-	private final int port = 9801;
+	private int port = 9801;
 
 	@Parameter(names = { "--logfile" }, description = "Logback config file")
 	private String logback;
